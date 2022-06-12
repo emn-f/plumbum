@@ -6,21 +6,20 @@ import { BrowserRouter } from 'react-router-dom';
 import { AppRoutes } from './routes';
 import { Texto } from './indexGeral';
 import { MenuLateral } from './shared/components/menu-lateral/MenuLateral';
-import { ThemeProvider } from '@emotion/react';
-import { LightTheme } from './shared/themes';
+import { AppThemeProvider, DrawerProvider } from './shared/contexts';
 
 export const App = () => {
   return (
+    <AppThemeProvider>
+      <DrawerProvider>
+        <BrowserRouter>
 
-    <BrowserRouter>
+          <MenuLateral>
+            <AppRoutes />
+          </MenuLateral>
 
-      <MenuLateral>
-        <AppRoutes />
-
-      </MenuLateral>
-
-
-    </BrowserRouter>
-
+        </BrowserRouter>
+      </DrawerProvider>
+    </AppThemeProvider>
   );
 };
