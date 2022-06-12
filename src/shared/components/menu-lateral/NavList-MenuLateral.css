@@ -1,0 +1,18 @@
+.nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .back-nav-list {
+    border-radius: 15px;
+    padding: 1.3vh;
+    background-size: contain;
+    font-size: clamp(0.5em, 0.5em + 0.6vw, 1.5em);
+  
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  

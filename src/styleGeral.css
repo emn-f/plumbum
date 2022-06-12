@@ -1,0 +1,228 @@
+/*.btn{
+  background: #55381c;
+  color: aliceblue;
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.titulo {
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  font-size: clamp(1em, 1em + 2.5vw, 6em);
+  margin-top: calc((3 / 4) * 20%);
+  margin-left: calc((3 / 4) * 40%);
+}
+
+.subtitulo {
+  color: #d9d8d8;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font: icon;
+  position: absolute;
+  width: calc((3 / 4) * 80%);
+  font-size: clamp(1em, 1em + 1.2vw, 3em);
+  margin-top: calc((3 / 4) * 40%);
+  margin-left: calc((3 / 4) * 38%);
+  justify-content: center;
+  text-align: center;
+}
+
+
+.logo {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: flex;
+  padding: 12px;
+  align-items: inherit;
+  flex-direction: row;
+}
+
+.logosizeimg {
+  margin-left: 5vh;
+  margin-right: 0.5vh;
+  display: flex;
+  padding: 6px;
+  height: 5vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #3F2B12;
+  height: 8vh;
+}
+
+a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.25;
+}
+
+a:hover {
+  font-weight: bold;
+  opacity: 0.5;
+  transition: 0.25s;
+}
+
+.mobile-menu {
+  cursor: pointer;
+  display: none;
+
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.back-nav-list {
+  border-radius: 15px;
+  padding: 1.3vh;
+  background-size: contain;
+  font-size: clamp(0.5em, 0.5em + 0.6vw, 1.5em);
+
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.cad_log {
+  border-radius: 15px;
+  background-color: #55381C;
+  padding: 12px;
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: clamp(0.8em, 0.5em + 0.6vw, 1.5em);
+  font-weight: bold;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.container {
+  background: url('./shared/components/backgroundHome.png') no-repeat;
+  background-size: cover;
+  height: 64.5vmax;
+  width: 100%;
+  position: relative;
+}
+
+.btn1 {
+  color: #d9d8d8;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font: icon;
+  font-size: clamp(1em, 1em + 1vw, 3em);
+  width: calc((3 / 4) * 55%);
+  margin-top: calc((3 / 4) * 60%);
+  margin-left: calc((3 / 4) * 50%);
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #55381C;
+  padding: 5px;
+  position: absolute;
+}
+
+.arrow {
+  margin-top: calc((3 / 4) * 70%);
+  margin-left: calc((3 / 4) * 74%);
+  position: absolute;
+}
+
+.section2 {
+  background-color: #9e9a9a;
+  height: 100vh;
+}
+
+.back2 {
+  overflow: hidden;
+  font-size: 12vh;
+  padding: 12vh;
+}
