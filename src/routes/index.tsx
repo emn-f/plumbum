@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Dashboard } from "../pages";
-import { Pagsd } from "../pages/dashboard/pagsd";
 import { useDrawerContext } from '../shared/contexts';
+import { LayoutBase } from "../shared/layouts";
 
 
 export const AppRoutes = () => {
@@ -20,9 +20,12 @@ export const AppRoutes = () => {
 
     return (
         <Routes>
-            <Route path="/home" element={<Pagsd />} />
+            <Route path="/home" element={<LayoutBase titulo={'Plumbum'} />} />
+
+            <Route path="/cadastro" element={<LayoutBase titulo={'Plumbum'} />} />
+
             <Route path="*" element={<Navigate to="/home" />} />
-        </Routes>
+        </Routes>   
     )
 
     /*

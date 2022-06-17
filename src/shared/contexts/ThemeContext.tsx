@@ -1,7 +1,7 @@
+import { Box } from '@mui/system';
 import { createContext, useCallback, useContext, useMemo, useState } from "react";
 import { ThemeProvider } from '@mui/material';
 import { DarkTheme, LightTheme } from './../themes';
-import { Box } from "@mui/system";
 
 type Props = {
     children?: React.ReactNode;
@@ -19,14 +19,14 @@ export const useAppThemeContext = () => {
 }
 
 export const AppThemeProvider: React.FC<Props> = ({ children }) => {
-    const [themeName, setThemName] = useState<'light' | 'dark'>('dark');
+    const [themeName, setThemName] = useState<'light' | 'dark'>('light');
 
     const toggleTheme = useCallback(() => {
-        setThemName(oldThemeName => oldThemeName === 'dark' ? 'light' : 'dark');
+        setThemName(oldThemeName => oldThemeName === 'light' ? 'dark' : 'light');
     }, []);
 
     const theme = useMemo(() => {
-        if (themeName === 'dark') return DarkTheme;
+        if (themeName === 'light') return LightTheme;
 
         return LightTheme;
     }, [themeName]);

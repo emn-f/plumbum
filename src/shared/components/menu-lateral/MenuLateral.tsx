@@ -4,6 +4,7 @@ import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
 import { useDrawerContext } from '../../contexts';
 
 
+
 type Props = {
     children?: React.ReactNode;
 };
@@ -40,13 +41,14 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({ to, icon, label, onClick }
 export const MenuLateral: React.FC<Props> = ({ children }) => {
     const theme = useTheme();
     const smDown = useMediaQuery(theme.breakpoints.down('sm'));
-    const { isDrawerOpen, toggleDrawerOpen, drawerOptions } = useDrawerContext();
+    const { isDrawerClose: isDrawerOpen, toggleDrawerClose: toggleDrawerOpen, drawerOptions } = useDrawerContext();
 
     return (
         <>
-            <Drawer open={isDrawerOpen} variant={smDown ? 'temporary' : 'permanent'} onClose={toggleDrawerOpen}>
-                <Box width={theme.spacing(28)} height='100' display='flex' flexDirection='column'>
-                    <Box flex={1}>
+            <Drawer anchor='right' open={isDrawerOpen} variant={smDown ? 'temporary' : 'permanent'} onClose={toggleDrawerOpen}         
+            >
+                <Box width={theme.spacing(28)} height='15' display='flex' flexDirection='column'>
+                    <Box flex={2}>
                         <List component='nav'>
                             {drawerOptions.map(drawerOption => (
                                 <ListItemLink
@@ -61,7 +63,7 @@ export const MenuLateral: React.FC<Props> = ({ children }) => {
                     </Box>
                 </Box>
             </Drawer>
-            <Box height='100vh' marginLeft={smDown ? 0 : theme.spacing(28)}>
+            <Box>
                 {children}
             </Box>
         </>
