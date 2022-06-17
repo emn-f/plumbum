@@ -47,8 +47,9 @@
   letter-spacing: 4px;
   display: flex;
   padding: 12px;
-  align-items: inherit;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .logosizeimg {
@@ -66,6 +67,8 @@ nav {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #3F2B12;
   height: 8vh;
+  overflow: hidden;
+
 }
 
 a {
@@ -85,8 +88,9 @@ a:hover {
 
 .mobile-menu {
   cursor: pointer;
-  display: none;
-
+  display: flex;
+  position: absolute;
+  overflow: hidden;
 }
 
 .mobile-menu div {
@@ -101,6 +105,8 @@ a:hover {
 .nav-list {
   list-style: none;
   display: flex;
+  overflow: hidden;
+  
 }
 
 .back-nav-list {
@@ -124,28 +130,24 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex: row;
   justify-content: space-around;
   font-size: clamp(0.8em, 0.5em + 0.6vw, 1.5em);
   font-weight: bold;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1067px) {
   body {
     overflow-x: hidden;
   }
 
   .nav-list {
     position: absolute;
-    top: 8vh;
-    right: 0;
-    width: 50vw;
-    height: 92vh;
-    background: #23232e;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     transform: translateX(100%);
-    transition: transform 0.3s ease-in;
+    transform: translateY(100%);
   }
 
   .nav-list li {

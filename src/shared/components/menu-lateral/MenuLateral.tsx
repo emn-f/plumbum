@@ -3,8 +3,6 @@ import { Box } from '@mui/system';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
 import { useDrawerContext } from '../../contexts';
 
-
-
 type Props = {
     children?: React.ReactNode;
 };
@@ -40,12 +38,13 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({ to, icon, label, onClick }
 
 export const MenuLateral: React.FC<Props> = ({ children }) => {
     const theme = useTheme();
-    const smDown = useMediaQuery(theme.breakpoints.down('sm'));
+
+    const mdDown = useMediaQuery(theme.breakpoints.down(1067));
     const { isDrawerClose: isDrawerOpen, toggleDrawerClose: toggleDrawerOpen, drawerOptions } = useDrawerContext();
 
     return (
         <>
-            <Drawer anchor='right' open={isDrawerOpen} variant={smDown ? 'temporary' : 'permanent'} onClose={toggleDrawerOpen}         
+            <Drawer anchor='right' open={isDrawerOpen} variant={mdDown ? 'temporary' : undefined} onClose={toggleDrawerOpen}
             >
                 <Box width={theme.spacing(28)} height='15' display='flex' flexDirection='column'>
                     <Box flex={2}>
@@ -56,7 +55,7 @@ export const MenuLateral: React.FC<Props> = ({ children }) => {
                                     key={drawerOption.path}
                                     icon={drawerOption.icon}
                                     label={drawerOption.label}
-                                    onClick={smDown ? toggleDrawerOpen : undefined}
+                                    onClick={mdDown ? toggleDrawerOpen : undefined}
                                 />
                             ))}
                         </List>

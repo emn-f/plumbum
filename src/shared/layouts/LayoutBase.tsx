@@ -17,21 +17,15 @@ interface ILayoutBaseProps {
 };
 
 export const LayoutBase: React.FC<ILayoutBaseProps> = ({ children, titulo }) => {
-    const smDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
+    const mdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down(1067));
     const theme = useTheme();
 
     const { toggleDrawerClose: toggleDrawerOpen } = useDrawerContext();
     return (
-        <Box height='100' display='flex' flexDirection='column' gap={1}>
-            <Box padding={1} alignItems='center' height={theme.spacing(12)} display='flex'>
-                {smDown && (
-                    <IconButton className='mobile-menu' onClick={toggleDrawerOpen}>
-                        <Icon>menu</Icon>
-                    </IconButton>)}
-            </Box>
 
-            
-            <body>
+
+
+        <body>
             <header>
                 <nav className='nav'> {/* navbar*/}
                     <a className='logo'> {/* logo e icon */}
@@ -49,6 +43,12 @@ export const LayoutBase: React.FC<ILayoutBaseProps> = ({ children, titulo }) => 
                         <li className='cad_log'><a href='/cadastro'>Cadastre-se</a></li>
                         <li className='cad_log'><a href='/login'>Login</a></li>
                     </ul>
+                    <div>
+                        {mdDown && (
+                            <IconButton className='mobile-menu' onClick={toggleDrawerOpen}>
+                                <Icon>menu</Icon>
+                            </IconButton>)}
+                    </div>
                 </nav>
             </header>
             <section className='container'> {/*secao 1*/}
@@ -68,7 +68,7 @@ export const LayoutBase: React.FC<ILayoutBaseProps> = ({ children, titulo }) => 
                 </div>
             </section>  {/*<script src="mobile-navbar.jsx"></script>*/};
         </body>
-        </Box>
+
 
     );
 };
