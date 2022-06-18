@@ -1,6 +1,6 @@
 import './../../styleGeral.css';
 import './../../App.css';
-import logo from '../../shared/components/logo.png'; //O arquivo custom.d.ts foi adicionado para o programa reconhcer a imagem em png
+import logo from '../../shared/components/icons/logo.png'; //O arquivo custom.d.ts foi adicionado para o programa reconhcer a imagem em png
 import { Box, Icon, IconButton, Theme, useMediaQuery, useTheme } from '@mui/material';
 import { useDrawerContext } from '../contexts';
 
@@ -18,9 +18,9 @@ export const NavbarDefault: React.FC<ILayoutBaseProps> = ({ children, titulo }) 
     const { toggleDrawerClose: toggleDrawerOpen } = useDrawerContext();
     return (
             <nav className='navbar'>
-                <a className='logo'>
-                    <a className='logosizeimg' href='/'><img src={logo} alt="Logo do Plumbum" /></a>
-                    <a href='/'>Plumbum</a>
+                <a href='/home'className='logo'>
+                    <a><img className='logosizeimg' src={logo} alt="Logo do Plumbum" /></a>
+                    <a>Plumbum</a>
                 </a>
 
                 <ul className='nav-list'>

@@ -1,6 +1,6 @@
 import './../styleGeral.css';
 import './../App.css';
-import seta from './../shared/components/arrow.png'; //O arquivo custom.d.ts foi adicionado para o programa reconhcer a imagem em png
+import seta from './../shared/components/icons/arrow.png'; //O arquivo custom.d.ts foi adicionado para o programa reconhcer a imagem em png
 import { Texto } from '../indexGeral';
 import { NavbarDefault } from '../shared/components/NavbarDefault';
 
@@ -17,7 +17,7 @@ export const PaginaInicial: React.FC<ILayoutBaseProps> = ({ children, titulo }) 
             <header>
                 <NavbarDefault titulo={'Plumbum'} />
             </header>
-            <section className='container'> {/*secao 1*/}
+            <section className='section1Home'> {/*secao 1*/}
                 <Texto siteNome='Plumbum' />
                 <ul className='btn1'> {/* botão na img*/}
                     <a href='/'>Conheça nossos métodos</a>
