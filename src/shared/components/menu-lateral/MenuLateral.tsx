@@ -1,4 +1,4 @@
-import { Avatar, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery, useTheme } from '@mui/material';
+import { Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery, useTheme } from '@mui/material';
 import { Box } from '@mui/system';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
 import { useDrawerContext } from '../../contexts';
@@ -46,7 +46,7 @@ export const MenuLateral: React.FC<Props> = ({ children }) => {
         <>
             <Drawer anchor='right' open={isDrawerOpen} variant={mdDown ? 'temporary' : undefined} onClose={toggleDrawerOpen}
             >
-                <Box width={theme.spacing(28)} height='15' display='flex' flexDirection='column'>
+                <Box width={theme.spacing(30)} height='15' display='flex' flexDirection='column'>
                     <Box flex={2}>
                         <List component='nav'>
                             {drawerOptions.map(drawerOption => (
