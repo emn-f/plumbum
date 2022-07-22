@@ -39,6 +39,7 @@ export const NavbarDefault: React.FC<ILayoutBaseProps> = ({ children, titulo }) 
                             <Icon>menu</Icon>
                         </IconButton>)}
                 </div>
+
             </nav>
     );
 };

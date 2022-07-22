@@ -5,6 +5,8 @@ import { useDrawerContext } from '../shared/contexts';
 import { LayoutBase } from "../shared/layouts";
 import LogoDevIcon from '@mui/icons-material/LogoDev';
 import { AcessoConta } from "../pages/AcessoConta";
+import { Login } from "../shared/components/apiGoogle/inicializar";
+import { Dashboard } from "../pages";
 
 export const AppRoutes = () => {
     const { setDrawerOptions } = useDrawerContext();
@@ -20,7 +22,12 @@ export const AppRoutes = () => {
                 icon: 'login',
                 path: '/account',
                 label:'Minha conta',
-            }
+            },
+            {
+            icon:'',
+            path:'/dashboard',
+            label:'Dashboard'
+        }
         ]);
       }, []);
 
@@ -29,7 +36,8 @@ export const AppRoutes = () => {
             <Route path="/home" element={<PaginaInicial titulo={'Plumbum'} />} />
             <Route path="/account" element={<AcessoConta titulo={'Plumbum'} />} />
             <Route path="/dev" element={<LayoutBase titulo={'Plumbum'} />} />
-
+            <Route path="/dashboard" element={<Dashboard titulo={'Plumbum'} />} />
+            <Route path="/login" element={<Login titulo={'Plumbum'} />} />
             <Route path="*" element={<Navigate to="/Home" />} />
         </Routes>   
     )
