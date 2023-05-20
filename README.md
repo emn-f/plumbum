@@ -1,46 +1,130 @@
-# Getting Started with Create React App
+# 📝 Plumbum | Plataforma de construção de textos: investigação e construção de recursos 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O presente projeto está sendo desenvolvido no âmbito do Grupo de Pesquisa Mosaico no Instituto Federal da Bahia, Campus Camaçari. A plataforma utiliza como base React com TypeScript. <br>
+## Passo a passo para deploy
 
-## Available Scripts
+### **Observação:** As instruções abaixo foram utilizadas para implementar a plataforma em um computador com Windows. Tais informações podem variar dependendo do SO do usuário.
 
-In the project directory, you can run:
+1. Para prosseguir é necessário possui o *Node.js* instalando no seu computador. Caso não possua realize o download e instalação pelo link:
+https://nodejs.org/en/.<br>
+Versão mínima: 18.12.1
+2. Em seguida vamos criar uma nova pasta para o projeto. Como utilizaremos bastante o **cmd** iremos criar a pasta por lá.
+- Utilize o atalho Windows + R para abrir o Executar.
+- Em seguida digite **cmd** e pressione Enter.
+3. Para criar uma nova pasta pelo Prompt de Comando, insira o comando *mkdir [nome da pasta desejada]* e pressione Enter. Não crie uma pasta com o nome *plumbum*, mais pra frente explicaremos o motivo.<br>
+Vamos criar a pasta *projetos*:
+~~~
+mkdir projetos
+~~~
+4. Para acessar a pasta, utilize o comando:
+~~~
+cd projetos
+~~~
+5. Seguindo todos os passos acima, a última linha do seu Terminal deve ser:
+~~~
+C:\Users\[user]\projetos> 
+~~~
+6. Agora vamos criar o projeto em React.ts. Para isso dê o seguinte comando e aguarde a finalização:
+~~~
+npx create-react-app plumbum --template typescript
+~~~
+7. Pronto, projeto criado. Agora vamos colocar o *Plumbum* aqui, para isso realize o donwload da pasta zip do projeto aqui mesmo no GitHub. Toque em "Code" e em seguida "Download ZIP". Extraia os arquivos. E seguida vamos pegar os arquivos, e mover para a pasta do projeto
+**Atenção:** Não copie e pasta extraída, e sim **os arquivos** que estão dentro da pasta:
+<br> <br>
+![Arquivos para deploy do Plumbum](src\shared\components\imgs\imgsReadme\filesplumbum.png)
+ 
+ 8. Feito isso basta agora realizar a instalação de algumas bibliotecas que estão sendo utilizadas na plataforma.
+ - De volta ao Prompt de Comando vamos acessar a pasta do projeto. Basta dar o seguinte comando:
+~~~
+cd plumbum
+~~~
+A última linha do seu *cmd* deve ser a seguinte:
+~~~
+C:\Users\emnfe\projetos\plumbum>
+~~~
+9. Execute os seguintes comandos, um após o outro:
 
-### `npm start`
+- Instalação do *React Router DOM*
+~~~
+npm install react-router-dom
+~~~
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Instalação do *Axios* (rotas)
+~~~
+npm install axios
+~~~
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Instalação das bibliotecas do *Material UI* (componentes e ícones)
+~~~
+npm install @mui/material @emotion/react @emotion/styled
+~~~
+~~~
+npm install @mui/icons-material
+~~~
 
-### `npm test`
+10. Pronto, após e execução de todos os código acima a plataforma está com a implementação completa. Para visualizá-la, informe o último comando (e que sempre será utilizado para acessar a plataforma) desse guia:
+~~~
+npm start
+~~~
+=======
+1. Para prosseguir é necessário possui o *Node.js* instalando no seu computador. Caso não possua realize o download e instalação pelo link:
+https://nodejs.org/en/.<br>
+Versão mínima: 18.12.1
+2. Em seguida vamos criar uma nova pasta para o projeto. Como utilizaremos bastante o **cmd** iremos criar a pasta por lá.
+- Utilize o atalho Windows + R para abrir o Executar.
+- Em seguida digite **cmd** e pressione Enter.
+3. Para criar uma nova pasta pelo Prompt de Comando, insira o comando *mkdir [nome da pasta desejada]* e pressione Enter. Não crie uma pasta com o nome *plumbum*, mais pra frente explicaremos o motivo.<br>
+Vamos criar a pasta *projetos*:
+~~~
+mkdir projetos
+~~~
+4. Para acessar a pasta, utilize o comando:
+~~~
+cd projetos
+~~~
+5. Seguindo todos os passos acima, a última linha do seu Terminal deve ser:
+~~~
+C:\Users\[user]\projetos> 
+~~~
+6. Agora vamos criar o projeto em React.ts. Para isso dê o seguinte comando e aguarde a finalização:
+~~~
+npx create-react-app plumbum --template typescript
+~~~
+7. Pronto, projeto criado. Agora vamos colocar o *Plumbum* aqui, para isso realize o donwload da pasta zip do projeto aqui mesmo no GitHub. Toque em "Code" e em seguida "Download ZIP". Extraia os arquivos. E seguida vamos pegar os arquivos, e mover para a pasta do projeto
+**Atenção:** Não copie e pasta extraída, e sim **os arquivos** que estão dentro da pasta:
+<br> <br>
+![Arquivos para deploy do Plumbum](src\shared\components\imgs\imgsReadme\filesplumbum.png)
+ 
+ 8. Feito isso basta agora realizar a instalação de algumas bibliotecas que estão sendo utilizadas na plataforma.
+ - De volta ao Prompt de Comando vamos acessar a pasta do projeto. Basta dar o seguinte comando:
+~~~
+cd plumbum
+~~~
+A última linha do seu *cmd* deve ser a seguinte:
+~~~
+C:\Users\emnfe\projetos\plumbum>
+~~~
+9. Execute os seguintes comandos, um após o outro:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Instalação do *React Router DOM*
+~~~
+npm install react-router-dom
+~~~
 
-### `npm run build`
+- Instalação do *Axios* (rotas)
+~~~
+npm install axios
+~~~
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Instalação das bibliotecas do *Material UI* (componentes e ícones)
+~~~
+npm install @mui/material @emotion/react @emotion/styled
+~~~
+~~~
+npm install @mui/icons-material
+~~~
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+10. Pronto, após e execução de todos os código acima a plataforma está com a implementação completa. Para visualizá-la, informe o último comando (e que sempre será utilizado para acessar a plataforma) desse guia:
+~~~
+npm start
+~~~
