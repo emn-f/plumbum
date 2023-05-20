@@ -1,6 +1,6 @@
 # 📝 Plumbum | Plataforma de construção de textos: investigação e construção de recursos 
 
-O pdresente projeto está sendo desenvolvido no âmbito do Grupo de Pesquisa Mosaico no Instituto Federal da Bahia, Campus Camaçari. A plataforma utiliza como base React com TypeScript. <br>
+O presente projeto está sendo desenvolvido no âmbito do Grupo de Pesquisa Mosaico no Instituto Federal da Bahia, Campus Camaçari. A plataforma utiliza como base React com TypeScript. <br>
 ## Passo a passo para deploy
 
 ### **Observação:** As instruções abaixo foram utilizadas para implementar a plataforma em um computador com Windows. Tais informações podem variar dependendo do SO do usuário.
