@@ -24,7 +24,7 @@ export const Cadastro: React.FC<ICadastro> = ({ children }) => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(inputs);
-        axios.post('http://localhost:8888/plumbum-api/user/save', inputs).then(function (response) {
+        axios.post('http://localhost:80/plumbum-api/user/save', inputs).then(function (response) {
             console.log(response.data);
         });
     };
