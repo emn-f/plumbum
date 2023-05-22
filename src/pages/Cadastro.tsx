@@ -21,7 +21,6 @@ export const Cadastro: React.FC<ICadastro> = ({ children }) => {
         setInputs(values => ({ ...values, [name]: value }))
     };
 
-
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(inputs);
