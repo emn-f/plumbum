@@ -31,7 +31,7 @@ npx create-react-app plumbum --template typescript
 7. Pronto, projeto criado. Agora vamos colocar o *Plumbum* aqui, para isso realize o donwload da pasta zip do projeto aqui mesmo no GitHub. Toque em "Code" e em seguida "Download ZIP". Extraia os arquivos. E seguida vamos pegar os arquivos, e mover para a pasta do projeto
 **Atenção:** Não copie e pasta extraída, e sim **os arquivos** que estão dentro da pasta:
 <br> <br>
-![Arquivos para deploy do Plumbum](src\shared\components\imgs\imgsReadme\filesplumbum.png)
+![Arquivos para deploy do Plumbum](src/shared/components/imgs/imgsReadme/filesplumbum.png)
  
  8. Feito isso basta agora realizar a instalação de algumas bibliotecas que estão sendo utilizadas na plataforma.
  - De volta ao Prompt de Comando vamos acessar a pasta do projeto. Basta dar o seguinte comando:
@@ -93,7 +93,7 @@ npx create-react-app plumbum --template typescript
 7. Pronto, projeto criado. Agora vamos colocar o *Plumbum* aqui, para isso realize o donwload da pasta zip do projeto aqui mesmo no GitHub. Toque em "Code" e em seguida "Download ZIP". Extraia os arquivos. E seguida vamos pegar os arquivos, e mover para a pasta do projeto
 **Atenção:** Não copie e pasta extraída, e sim **os arquivos** que estão dentro da pasta:
 <br> <br>
-![Arquivos para deploy do Plumbum](src\shared\components\imgs\imgsReadme\filesplumbum.png)
+![Arquivos para deploy do Plumbum](src/shared/components/imgs/imgsReadme/filesplumbum.png)
  
  8. Feito isso basta agora realizar a instalação de algumas bibliotecas que estão sendo utilizadas na plataforma.
  - De volta ao Prompt de Comando vamos acessar a pasta do projeto. Basta dar o seguinte comando:
