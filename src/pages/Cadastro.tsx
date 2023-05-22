@@ -21,11 +21,10 @@ export const Cadastro: React.FC<ICadastro> = ({ children }) => {
         setInputs(values => ({ ...values, [name]: value }))
     };
 
-
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(inputs);
-        axios.post('http://localhost:8888/plumbum-api/user/save', inputs).then(function (response) {
+        axios.post('http://localhost:80/plumbum-api/user/save', inputs).then(function (response) {
             console.log(response.data);
         });
     };
@@ -63,10 +62,10 @@ export const Cadastro: React.FC<ICadastro> = ({ children }) => {
 
                             <div className="cad_radio">
                                 <div className="cad_insertRadio">
-                                    <input placeholder="Osl" className="cad_insertRadio" type="radio" id="tipo_estudante" name="tipo" value="E" onChange={handleChange} /><label htmlFor="tipo_estudante">Estudante</label>
+                                    <input placeholder="Osl" className="cad_insertRadio" type="radio" id="tipo_estudante" name="tipo" value="1" onChange={handleChange} /><label htmlFor="tipo_estudante">Estudante</label>
                                 </div>
                                 <div className="cad_insertRadio">
-                                    <input className="cad_insertRadio" type="radio" id="tipo_professor" name="tipo" value="P" onChange={handleChange} /><label htmlFor="tipo_professor">Professor</label>
+                                    <input className="cad_insertRadio" type="radio" id="tipo_professor" name="tipo" value="2" onChange={handleChange} /><label htmlFor="tipo_professor">Professor</label>
                                 </div>
                             </div>
 
