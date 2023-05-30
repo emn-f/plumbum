@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import { Home } from "../pages/Home";
 import { Cadastro } from "../pages/Cadastro";
+import { Login } from "../pages/Login";
 import { Dev } from "../pages/Dev";
 import { Assunto } from "../pages/ficha-planejamento/Assunto";
 import { Tema } from "../pages/ficha-planejamento/Tema";
@@ -51,6 +52,7 @@ export const AppRoutes = () => {
             {/* PÁGINAS PRINCIPAIS */}
             <Route path="/home" element={<Home />} />
             <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/login" element={<Navigate to="/cadastro" />} />
             {/* <Route path="/contato" element={<Navigate to="/dev" />} /> */}
             <Route path="/contato" element={<Contato />} />

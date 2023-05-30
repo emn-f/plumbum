@@ -1,6 +1,8 @@
 import { Navbar } from "../shared/components/Navbar";
 import { Rodape } from "../shared/components/Rodape";
 
+import phEscritores from "../shared/components/placeholderEscritores";
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -13,6 +15,7 @@ interface ICadastro {
 };
 
 export const Cadastro: React.FC<ICadastro> = ({ children }) => {
+    
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -29,6 +32,7 @@ export const Cadastro: React.FC<ICadastro> = ({ children }) => {
         });
     };
     return (
+        
         <html>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -44,25 +48,27 @@ export const Cadastro: React.FC<ICadastro> = ({ children }) => {
                     <form onSubmit={handleSubmit}>
                         <div className="formulario">
 
-                            <div className="cad_label"><label htmlFor="nome">Cadastre-se!</label></div>
+                            <div className="cad_label"><label htmlFor="nome">Cadastre-se</label></div>
+                            <br />
+                            <label className="cad_campo" htmlFor="nome" style={{ margin: '0 0 0.5em 0.2em' }}>Nome:</label>
+                            <input className="cad_insert" type="text"  placeholder="Manuel Bandeira" size={35} id="nome" name="nome" onChange={handleChange} />
+                            <br />
+                            <br />
+                            <br />
                             <br />
 
-                            <label className="cad_campo" htmlFor="nome">Nome:</label>
-                            <input className="cad_insert"  placeholder="Machado de Assis" type="text" size={35} id="nome" name="nome" onChange={handleChange} />
-                            <br />
-                            <br />
-                            <label className="cad_campo" htmlFor="email"><strong>E-mail: </strong></label>
+                            <label className="cad_campo" htmlFor="email" style={{ margin: '0 0 0.5em 0.2em' }}><strong>E-mail: </strong></label>
                             <input className="cad_insert" type="email" size={35} id="email" name="email" onChange={handleChange} />
                             <br />
                             <br />
 
-                            <label className="cad_campo" htmlFor="senha"><strong>Senha: </strong></label>
+                            <label className="cad_campo" htmlFor="senha" style={{ margin: '0 0 0.5em 0.2em' }}><strong>Senha: </strong></label>
                             <input className="cad_insert" type="password" size={35} id="senha" name="senha" onChange={handleChange} />
 
 
                             <div className="cad_radio">
                                 <div className="cad_insertRadio">
-                                    <input placeholder="Osl" className="cad_insertRadio" type="radio" id="tipo_estudante" name="tipo" value="1" onChange={handleChange} /><label htmlFor="tipo_estudante">Estudante</label>
+                                    <input className="cad_insertRadio" type="radio" id="tipo_estudante" name="tipo" value="1" onChange={handleChange} /><label htmlFor="tipo_estudante">Estudante</label>
                                 </div>
                                 <div className="cad_insertRadio">
                                     <input className="cad_insertRadio" type="radio" id="tipo_professor" name="tipo" value="2" onChange={handleChange} /><label htmlFor="tipo_professor">Professor</label>
