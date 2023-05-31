@@ -62,7 +62,7 @@ export const Cadastro: React.FC<ICadastro> = ({ children }) => {
                             <br />
                             <br />
 
-                            <label className="cad_campo" htmlFor="senha" style={{ margin: '0 0 0.5em 0.2em' }}><strong>Senha:bruna</strong></label>
+                            <label className="cad_campo" htmlFor="senha" style={{ margin: '0 0 0.5em 0.2em' }}><strong>Senha:emanuel</strong></label>
                             <input className="cad_insert" type="password" size={35} id="senha" name="senha" onChange={handleChange} />
 
 
