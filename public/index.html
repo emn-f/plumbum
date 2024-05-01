@@ -1,4 +1,33 @@
 <!DOCTYPE html>
+
+<?php
+
+declare(strict_types=1);
+header('Access-Control-Allow-Origin: http://localhost:3000/*');
+header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Methods: POST, GET');
+header('Access-Control-Allow-Credentials: true');
+
+?>
+
+
+
+<script>
+  const xhr = new XMLHttpRequest();
+
+  xhr.open("POST", "http://localhost/plumbum-api/*");
+  xhr.setRequestHeader("Access-Control-Allow-Origin", "http://localhost:3000/*");
+
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      const users = JSON.parse(xhr.responseText);
+      // ...
+    }
+  };
+
+  xhr.send();
+</script>
+
 <html lang="pt-Br">
 
 <head>

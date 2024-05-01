@@ -9,10 +9,10 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.0",
+    "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.1",
+    "@mui/icons-material": "^5.15.0",
+    "@mui/material": "^5.15.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "cors": "^2.8.5",
@@ -20,7 +20,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-hook-form": "^7.33.1",
-    "react-router-dom": "^6.11.2",
+    "react-router-dom": "^6.21.0",
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
