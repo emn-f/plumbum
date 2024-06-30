@@ -1,5 +1,5 @@
 node_modules
 notas.md
-src\App.test.tsx
+src/App.test.tsx
 yarn.lock
-src\pages\aulas
+src/pages/aulas
