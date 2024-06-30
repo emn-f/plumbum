@@ -10,6 +10,7 @@ import { Tema } from "../pages/ficha-planejamento/Tema";
 import { TextosMotivadores } from "../pages/ficha-planejamento/TextosMotivadores";
 import { useDrawerContext } from '../shared/contexts';
 import { PortalEstudante } from "../pages/PortalEstudante";
+import { PortalProfessor } from "../pages/PortalProfessor";
 import { PalavraChave } from "../pages/ficha-planejamento/PalavrasChave";
 import { Tese } from "../pages/ficha-planejamento/Tese";
 import { Argumentos } from "../pages/ficha-planejamento/Argumentos";
@@ -18,6 +19,9 @@ import { PropostaIntervencao } from "../pages/ficha-planejamento/PropostaInterve
 import { Resumo } from "../pages/ficha-planejamento/Resumo";
 import { ProducaoTextual } from "../pages/ProducaoTextual";
 import Contato from "../pages/Contato";
+import { Dashboard } from "../pages/aulas/dash/dash";
+import { LoginP } from "../pages/aulas/Login copy";
+import { Teste } from "../pages/aulas/Login copy 2";
 
 
 export const AppRoutes = () => {
@@ -57,13 +61,17 @@ export const AppRoutes = () => {
             {/* <Route path="/contato" element={<Navigate to="/dev" />} /> */}
             <Route path="/contato" element={<Contato />} />
 
-            {/* FICHA DE PLANEJAMENTO */}
             <Route path="/new" element={<PortalEstudante />} />
             <Route path="/login" element={<Navigate to="/cadastro" />} />
             <Route path="/txt" element={<ProducaoTextual />}/>
             <Route path="/login/textos" element={<PortalEstudante />}/>
+            <Route path="/login/prof" element={<PortalProfessor />}/>
             <Route path="/login/relatorios" element={<Navigate to="/login" />} />
+            <Route path='/dash' element={<Dashboard/>} />
+            <Route path='/loginp' element={<LoginP/>} />
+            <Route path='/teste' element={<Teste/>} />
 
+            {/* FICHA DE PLANEJAMENTO */}
             <Route path="new/ficha-planejamento/assunto" element={<Assunto />} />
             <Route path="new/ficha-planejamento/assunto/tema" element={<Tema />} />
             <Route path="new/ficha-planejamento/assunto/tema/textos-motivadores" element={<TextosMotivadores />} />
@@ -73,6 +81,8 @@ export const AppRoutes = () => {
             <Route path="new/ficha-planejamento/assunto/tema/textos-motivadores/palavras-chave/tese/argumentos/lista-ideias" element={<ListaIdeias />} />
             <Route path="new/ficha-planejamento/assunto/tema/textos-motivadores/palavras-chave/tese/argumentos/lista-ideias/intervencao" element={<PropostaIntervencao />} />
             <Route path="new/ficha-planejamento/assunto/tema/textos-motivadores/palavras-chave/tese/argumentos/lista-ideias/intervencao/resumo" element={<Resumo />} />
+            <Route path="new/ficha-planejamento/assunto/tema/textos-motivadores/palavras-chave/tese/argumentos/lista-ideias/intervencao/producaotextual" element={<ProducaoTextual />} />
+
         </Routes>
     )
 
