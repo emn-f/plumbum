@@ -20,8 +20,8 @@ import { Resumo } from "../pages/ficha-planejamento/Resumo";
 import { ProducaoTextual } from "../pages/ProducaoTextual";
 import Contato from "../pages/Contato";
 import { Dashboard } from "../pages/aulas/dash/dash";
-import { LoginP } from "../pages/aulas/Login copy";
-import { Teste } from "../pages/aulas/Login copy 2";
+import { LoginP } from "../pages/aulas/login copy";
+import { Teste } from "../pages/aulas/login copy2";
 
 
 export const AppRoutes = () => {
