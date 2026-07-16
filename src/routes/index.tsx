@@ -19,9 +19,6 @@ import { PropostaIntervencao } from "../pages/ficha-planejamento/PropostaInterve
 import { Resumo } from "../pages/ficha-planejamento/Resumo";
 import { ProducaoTextual } from "../pages/ProducaoTextual";
 import Contato from "../pages/Contato";
-import { Dashboard } from "../pages/aulas/dash/dash";
-import { LoginP } from "../pages/aulas/login copy";
-import { Teste } from "../pages/aulas/login copy2";
 
 
 export const AppRoutes = () => {
@@ -67,9 +64,7 @@ export const AppRoutes = () => {
             <Route path="/login/textos" element={<PortalEstudante />}/>
             <Route path="/login/prof" element={<PortalProfessor />}/>
             <Route path="/login/relatorios" element={<Navigate to="/login" />} />
-            <Route path='/dash' element={<Dashboard/>} />
-            <Route path='/loginp' element={<LoginP/>} />
-            <Route path='/teste' element={<Teste/>} />
+
 
             {/* FICHA DE PLANEJAMENTO */}
             <Route path="new/ficha-planejamento/assunto" element={<Assunto />} />
